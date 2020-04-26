@@ -1,0 +1,63 @@
+1. """Write a Python program to sum all the items in a list"""
+
+user_input = list()
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list : '))
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+sum  = 0
+for i in user_input:
+  sum += i
+
+print('The sum of the list elements is ', sum)
+
+2. """Write a Python program to multiplies all the items in a list"""
+
+user_input = list()
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list : '))
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+product = 1
+for i in user_input:
+  product = product * i
+
+print('The product of the list elements is ', product)
+
+3. """Write a Python program to get the largest number from a list."""
+
+user_input = list()
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list : '))
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+max = 0
+for i in user_input:
+  if i>max:
+    max = i
+
+print('The maximum of the list elements is ', max)
+
+#aliter method
+new_list = sorted(user_input, reverse=True)
+print(new_list[0])
+
+4. """Write a Python program to get the smallest number from a list"""
+
+user_input = list()
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list : '))
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+new_list = sorted(user_input)
+print('The minimum of the list elements is ', new_list[0])
+
+5. 
