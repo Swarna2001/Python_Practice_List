@@ -75,4 +75,60 @@ for i in user_input:
 
 print(final_list)
 
-15. 
+16. """Write a Python program to generate and print a list of first and last 5 elements where the values are square of numbers between 1 and 30 (both included)."""
+
+start = end = 0
+while not(start>0 and start <31):
+  start = int(input('Enter the starting number : '))
+
+while not(end>0 and end<31):
+  end = int(input('Enter the ending number : '))
+
+final_list = list()
+for i in range(start, start+5):
+  final_list.append(i**2)
+print(final_list)
+
+final_list = list()
+for i in range(end-4, end+1):
+  final_list.append(i**2)
+print(final_list)
+
+17. """Write a Python program to generate and print a list except for the first 5 elements, where the values are square of numbers between 1 and 30 (both included)."""
+
+start = end = 0
+while not(start>0 and start <31):
+  start = int(input('Enter the starting number : '))
+
+while not(end>0 and end<31):
+  end = int(input('Enter the ending number : '))
+
+final_list = list()
+for i in range(start+5, end+1):
+  final_list.append(i**2)
+print(final_list)
+
+18. 
+
+19. """Write a Python program to get the difference between the two lists."""
+
+user_input_1 = list()
+
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list 1 : '))
+  user_input_1.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+user_input_2 = list()
+
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list 2: '))
+  user_input_2.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+set_1 = set(user_input_1)
+set_2 = set(user_input_2)
+print(list(set_1.symmetric_difference(set_2)))
+
