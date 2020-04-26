@@ -60,4 +60,49 @@ while choice=='y':
 new_list = sorted(user_input)
 print('The minimum of the list elements is ', new_list[0])
 
-5. 
+5. """Write a Python program to count the number of strings where the string length is 2 or more and the first and last character are same from a given list of strings"""
+
+def func_count(string_arg):
+  """This function will check if the string_arg satisfies the mentioned conditions"""
+  if len(string_arg)<2:
+    return 0
+  else:
+    if string_arg[0] == string_arg[-1]:
+      return 1
+    else:
+      return 0
+
+user_input = list()
+choice = 'y'
+while choice=='y':
+  elt = input('Enter the element of the list : ')
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+count_var = 0
+for i in user_input:
+  count_var += func_count(i)
+
+print("The number of such strings are ", count_var)
+
+6. """Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples"""
+
+user_input = {}
+choice = 'y'
+while choice=='y':
+  n = int(input('Enter the number of tuple elements : '))
+  temp_tuple = list()
+  elt = 0
+  for i in range(0, n):
+    elt  = int(input('Enter the tuple element : '))
+    temp_tuple.append(elt)
+  user_input[elt] = tuple(temp_tuple)
+  choice = input('Do you want to continue(y/n) : ')
+
+sorted_dict = sorted(user_input.items())
+final_list = list()
+for i in sorted_dict:
+  final_list.append(i[1])
+print('The answer is ', final_list)
+
+7. 
