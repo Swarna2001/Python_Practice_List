@@ -105,4 +105,57 @@ for i in sorted_dict:
   final_list.append(i[1])
 print('The answer is ', final_list)
 
-7. 
+7. """Write a Python program to remove duplicates from a list."""
+
+user_input = list()
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list : '))
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+temp_set = set(user_input)
+final_list = list(temp_set)
+
+print('The list after removind duplicates is ', final_list)
+
+8. """Write a Python program to check a list is empty or not."""
+
+user_input = input('Enter the list (empty list - []) : ')
+if user_input=='[]':
+  print('It is an empty list')
+else:
+  print('It is not an empty list')
+  
+9."""Write a Python program to clone or copy a list."""
+
+
+user_input = list()
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list : '))
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+final_list = list(user_input)
+
+print('The clone list is  ', final_list)
+
+10. """Write a Python program to find the list of words that are longer than n from a given list of words."""
+
+user_input = list()
+choice = 'y'
+while choice=='y':
+  elt = input('Enter the element of the list : ')
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+n = int(input('Enter the value of n :'))
+var_count = 0
+for i in user_input:
+  if len(i)<=n:
+    var_count +=1
+
+print('The count of such words is ', var_count)
+
+10.  
