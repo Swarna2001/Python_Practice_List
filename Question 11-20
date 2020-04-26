@@ -1,0 +1,78 @@
+11. """Write a Python function that takes two lists and returns True if they have at least one common member."""
+
+def func_check(list_arg_1, list_arg_2):
+  temp_set_1 = set(list_arg_1)
+  temp_set_2 = set(list_arg_2)
+
+  temp = temp_set_1.intersection(temp_set_2)
+  if not temp:
+    return False
+  else:
+    return True
+
+user_input_1 = list()
+user_input_2 = list()
+
+choice = 'y'
+while choice=='y':
+  elt = input('Enter the element of the list 1 : ')
+  user_input_1.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+choice = 'y'
+while choice=='y':
+  elt = input('Enter the element of the list 2 : ')
+  user_input_2.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+print(func_check(user_input_1, user_input_2))
+
+12. """Write a Python program to print a specified list after removing the 0th, 4th and 5th elements."""
+
+user_input = list()
+
+choice = 'y'
+while choice=='y':
+  elt = input('Enter the element of the list 1 : ')
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+if not user_input:
+  print(user_input)
+elif len(user_input)<4:
+  element_0 = user_input[0]
+  user_input.remove(element_0)
+  print(user_input)
+elif len(user_input)<6:
+  element_0 = user_input[0]
+  element_4 = user_input[4]
+  user_input.remove(element_0)
+  user_input.remove(element_4)
+  print(user_input)
+else:
+  element_0 = user_input[0]
+  element_4 = user_input[4]
+  element_6 = user_input[6]
+  user_input.remove(element_0)
+  user_input.remove(element_4)
+  user_input.remove(element_6)
+  print(user_input)
+  
+ 14. """Write a Python program to print the numbers of a specified list after removing even numbers from it."""
+
+user_input = list()
+
+choice = 'y'
+while choice=='y':
+  elt = int(input('Enter the element of the list 1 : '))
+  user_input.append(elt)
+  choice = input('Do you want to continue(y/n) : ')
+
+final_list = list()
+for i in user_input:
+  if i%2!=0:
+    final_list.append(i)
+
+print(final_list)
+
+15. 
